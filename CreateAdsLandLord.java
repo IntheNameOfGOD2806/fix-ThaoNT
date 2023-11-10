@@ -74,6 +74,8 @@ public class CreateAdsLandLord extends HttpServlet {
                     dao.createAds(houseID, 50000, startdate, enddate,1);
                     accountDAO.updateBalance(landlordID, balance);
                     accountDAO.updateBalance(account_MKT.getAccountId(), MKT_Balance);
+                   request.getRequestDispatcher("ListAdsLandLord").forward(request, response);
+                    
                 }
 
                 break;
@@ -92,6 +94,8 @@ public class CreateAdsLandLord extends HttpServlet {
                     dao.createAds(houseID, 200000, startdate1, enddate1,1);
                     accountDAO.updateBalance(landlordID, balance);
                     accountDAO.updateBalance(account_MKT.getAccountId(), MKT_Balance);
+                   request.getRequestDispatcher("ListAdsLandLord").forward(request, response);
+                    
                 }
 
                 break;
@@ -110,6 +114,8 @@ public class CreateAdsLandLord extends HttpServlet {
                     dao.createAds(houseID, 600000, startdate2, enddate2,1);
                     accountDAO.updateBalance(landlordID, balance);
                     accountDAO.updateBalance(account_MKT.getAccountId(), MKT_Balance);
+                   request.getRequestDispatcher("ListAdsLandLord").forward(request, response);
+                    
                 }
 
                 break;
