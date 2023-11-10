@@ -94,6 +94,9 @@
                                 <div class="wc-title">
                                     <h4>Create Advertisement</h4>
                                 </div>
+<div class="form-outline mb-4">
+                                                <font color="red">${requestScope.errorad}</font>
+                                            </div>
                                 <div class="widget-inner">
                                     <table height="50%" width ="50%" border="1">
                                         <thead>
@@ -127,9 +130,7 @@
                                                     </td>
                                                     <td><input type="submit" value="Create"></td>
                                                 </tr>
-                                            <div class="form-outline mb-4">
-                                                <font color="red">${requestScope.errorad}</font>
-                                            </div>
+                                            
                                             </tbody>
                                         </form>
 
