@@ -96,6 +96,7 @@
                                 </div>
 <div class="form-outline mb-4">
                                                 <font color="red">${requestScope.errorad}</font>
+
                                             </div>
                                 <div class="widget-inner">
                                     <table height="50%" width ="50%" border="1">
