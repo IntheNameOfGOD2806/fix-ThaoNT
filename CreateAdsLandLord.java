@@ -55,7 +55,7 @@ public class CreateAdsLandLord extends HttpServlet {
         Account account_MKT = accountDAO.getAccountByAccountId(10);
         
         if (timeAds==0) {
-             session.setAttribute("errorad", "please choose time");
+             request.setAttribute("errorad", "please choose time");
 //            request.getRequestDispatcher("landlord/createAds.jsp").forward(request, response);
         }
         switch (timeAds) {
@@ -68,7 +68,7 @@ public class CreateAdsLandLord extends HttpServlet {
                 Date startdate = dao.convert(startDate_raw);
                 Date enddate = dao.convert(endDate_raw);
                 if (balance < 0) {
-                    session.setAttribute("errorad", "There is not enough money in the account to make this transaction");
+                    request.setAttribute("errorad", "There is not enough money in the account to make this transaction");
 //                    request.getRequestDispatcher("landlord/createAds.jsp").forward(request, response);
                 } else {
                     dao.createAds(houseID, 50000, startdate, enddate,1);
@@ -86,7 +86,7 @@ public class CreateAdsLandLord extends HttpServlet {
                 Date startdate1 = dao.convert(startDate_raw1);
                 Date enddate1 = dao.convert(endDate_raw1);
                 if (balance < 0) {
-                    session.setAttribute("errorad", "There is not enough money in the account to make this transaction");
+                    request.setAttribute("errorad", "There is not enough money in the account to make this transaction");
 //                    request.getRequestDispatcher("landlord/createAds.jsp").forward(request, response);
                 } else {
                     dao.createAds(houseID, 200000, startdate1, enddate1,1);
@@ -104,7 +104,7 @@ public class CreateAdsLandLord extends HttpServlet {
                 Date startdate2 = dao.convert(startDate_raw2);
                 Date enddate2 = dao.convert(endDate_raw2);
                 if (balance < 0) {
-                    session.setAttribute("errorad", "There is not enough money in the account to make this transaction");
+                    request.setAttribute("errorad", "There is not enough money in the account to make this transaction");
 //                    request.getRequestDispatcher("landlord/createAds.jsp").forward(request, response);
                 } else {
                     dao.createAds(houseID, 600000, startdate2, enddate2,1);
